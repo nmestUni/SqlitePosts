@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tools:LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+
+    <TextView
+        android:id="@+id/addscrn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="Update Post"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:layout_marginLeft="100dp" />
+    <EditText
+        android:id="@+id/editTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:ems="10" />
+    <TextView
+        android:id="@+id/txtBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        android:text="Body"/>
+    <EditText
+        android:id="@+id/editBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:ems="10"/>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:text="Add Post" />
+    <TextView android:id="@+id/linkList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Back to list"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textColor="#3F51B5"/>
+    <TextView android:id="@+id/errorMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textColor="#ff0000"/>
+
+</tools:LinearLayout>
