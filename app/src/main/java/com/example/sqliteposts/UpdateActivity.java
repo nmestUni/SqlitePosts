@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class UpdateActivity extends AppCompatActivity {
 
@@ -56,6 +57,9 @@ public class UpdateActivity extends AppCompatActivity {
                 updateValues.put("title", title);
                 updateValues.put("body", body);
                 MainActivity.db.update("posts", updateValues, "id = ?", new String[] {String.valueOf(postId)});
+
+                Toast.makeText(getApplicationContext(),"Successfully updated",Toast.LENGTH_SHORT).show();
+
             }
         });
 

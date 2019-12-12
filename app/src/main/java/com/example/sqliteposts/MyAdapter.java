@@ -39,6 +39,7 @@ public class MyAdapter  extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context,UpdateActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.putExtra("postId", itemsData.get(position).getId());
                 context.startActivity(intent);
             }
@@ -48,6 +49,8 @@ public class MyAdapter  extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             public void onClick(View v) {
                 String postId = String.valueOf(itemsData.get(position).getId());
                 MainActivity.db.delete("posts", "id = ?", new String[] {postId});
+                itemsData.remove(position);
+                notifyDataSetChanged();
             }
         });
     }

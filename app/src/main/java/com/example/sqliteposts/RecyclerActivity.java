@@ -5,8 +5,12 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
+import android.view.View;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -15,11 +19,22 @@ import static android.widget.LinearLayout.VERTICAL;
 public class RecyclerActivity extends AppCompatActivity {
 
     MyAdapter adapter;
+    TextView linkAdd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler);
+
+        linkAdd = findViewById(R.id.linkAdd);
+        linkAdd.setMovementMethod(LinkMovementMethod.getInstance());
+        linkAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RecyclerActivity.this, AddActivity.class);
+                startActivity(intent);
+            }
+        });
 
         ArrayList<ItemData> data = new ArrayList<>();
 

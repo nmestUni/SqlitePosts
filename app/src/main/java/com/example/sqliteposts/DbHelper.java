@@ -7,8 +7,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DbHelper extends SQLiteOpenHelper {
 
     private static final int DB_V = 1;
-    private static final String DB_N = "PostsDB";
-    private static final String CR_T = "CREATE TABLE posts (id INTEGER NOT NULL, title TEXT, body TEXT)";
+    private static final String DB_N = "PostDB";
+    private static final String CR_T = "CREATE TABLE posts (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, body TEXT)";
 
     public DbHelper(Context context) {
         super(context, DB_N, null, DB_V);
